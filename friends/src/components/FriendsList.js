@@ -29,11 +29,11 @@ class FriendList extends React.Component {
             <div className='friends-container'>
                 <div className='friends-list'>
                     <h2>Friends:</h2>
-                    {this.state.friends.map(friends => {
-                        return <Friend key={friend.id} name={friend.name} email={email} />
+                    {this.state.friends.map(friend => {
+                        return <Friend key={friend.id} name={friend.name} email={friend.email} />
                     })}
                 </div>
-                <FriendList />
+                <FriendsForm />
             </div>
         )
     }
