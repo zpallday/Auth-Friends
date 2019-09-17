@@ -6,6 +6,7 @@ class FriendForm extends React.Component {
     state = {
       friend: {
         name: '',
+        age:'',
         email: ''
       }
     };
@@ -40,6 +41,7 @@ class FriendForm extends React.Component {
               value={this.state.friend.name}
               onChange={this.handleChange}
             />
+
             <input
               type="email"
               name="email"

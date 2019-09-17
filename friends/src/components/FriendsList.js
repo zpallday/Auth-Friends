@@ -2,6 +2,7 @@ import React from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import Friend from './Friends';
 import FriendsForm from './FriendsForm';
+// import { Grid } from 'semantic-ui-css';
 
 class FriendList extends React.Component {
     state = {
@@ -26,15 +27,18 @@ class FriendList extends React.Component {
     }
  render() {
         return (
+         
             <div className='friends-container'>
                 <div className='friends-list'>
                     <h2>Friends:</h2>
                     {this.state.friends.map(friend => {
-                        return <Friend key={friend.id} name={friend.name} email={friend.email} />
+                        return <Friend key={friend.id} name={friend.name} age={friend.age} email={friend.email} />
                     })}
                 </div>
                 <FriendsForm />
+                
             </div>
+           
         )
     }
 }
