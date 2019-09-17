@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 
@@ -7,7 +6,6 @@ class FriendForm extends React.Component {
     state = {
       friend: {
         name: '',
-        age: '',
         email: ''
       }
     };
@@ -39,7 +37,7 @@ class FriendForm extends React.Component {
             <input
               type="text"
               name="name"
-              value={this.state.friend.age}
+              value={this.state.friend.name}
               onChange={this.handleChange}
             />
             <input
